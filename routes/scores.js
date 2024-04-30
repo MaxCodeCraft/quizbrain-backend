@@ -12,9 +12,10 @@ router.post("/new", (req, res) => {
     const newScore = new Score({
       user: req.body.user,
       score: req.body.score,
+      category: req.body.category,
       date: new Date(),
     });
-    newScore.save().then((data) => res.json({ result: true }));
+    newScore.save().then(() => res.json({ result: true }));
   }
 });
 
