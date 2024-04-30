@@ -1,6 +1,5 @@
 var express = require("express");
 var router = express.Router();
-import Score from "../models/scores";
 
 router.get("/", async (req, res) => {
   const response = await Score.find();
